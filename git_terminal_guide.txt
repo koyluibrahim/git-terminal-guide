@@ -1,0 +1,138 @@
+GİT TERMİNAL KOMUTLARI:
+----------------------------------------
+
+pwd
+print working directory - içinde olduğumuz konumu gösterir
+
+ls
+içinde olduğumuz klasördeki dosya ve klasörleri gösterir
+
+ls -la
+içinde olduğumuz klasördeki dosya ve klasörleri liste halinde gösterir
+
+cd x
+x klasörüne gider
+
+cd ..
+bir klasör geriye gider
+
+clear
+sayfayı temizler
+
+touch x
+x dosyasını oluşturur - oluştururken uzantısını da yazmamız gerekir
+
+rm x
+x dosyasını siler - uzantısını da yazmamız gerekir
+
+rm -rf x
+x klasörünü siler
+
+mkdir x
+x klasörünü oluşturur
+
+git config --global user. name "isim"
+git config --global user.email "email"
+isim ve email vermek için
+
+---------------------------------------------------------------------------------------------------
+
+git status
+o anki git durumu verir
+
+git init
+klasör içinde git'i aktif eder - bunu çalıştırmadan önce git status ile kontrol edilmeli
+
+git add x
+çalışma dizinindeki x dosyası git için hazırlama alanına (stage area) eklenir
+
+git add .
+dizindeki tüm dosyaları stage'e ekler
+
+git rm --cached x
+x dosyasını unstage eder - git artık bu dosyayı takip etmez ve ilerde yapılacak commit'e dahil etmez
+
+git commit -m "iletilecek mesaj"
+commit yapılır ve verilen mesaj yazılır - checkpoint gibi
+
+git log
+daha önce atılan bütün commitleri gösterir
+
+git restore x
+x dosyasını en son stage'e geri döndürür
+
+---------------------------------------------------------------------------------------------------
+
+git branch
+şu an hangi branch'te olduğumuzu gösterir
+
+git branc x
+x branch'ini oluşturur
+
+git switch x
+x branch'ine geçer
+
+git merge x
+x branch'ini içinde olduğumuz branch'e entegre eder - merge(birleştirmek)
+
+---------------------------------------------------------------------------------------------------
+
+git checkout x
+x yerine gidilmek istenen commit'in ID'si yazılır ve o commit'e gidilir
+
+git reset --hard x
+x ID'li commit'e gidilir ve ondan sonra atılmış olan commit'ler silinir - yani o commit'e resetler
+
+git revert x
+x ID'sine dönülmüş yeni bir commit ekler. önceki commitler silinmez.
+bu kodu yazınca oluşan conflict'i(çatışmayı) düzenleriz, "git add" ile stage'e ekleriz, sonra "git revert --continue" yazar ve yeni commiti atmış oluruz
+eğer bu conflict'i çözmek yerine işlemi iptal etmek istersek "git revert --abort" yazarız ve işlem iptal edilir
+
+---------------------------------------------------------------------------------------------------
+
+git stash
+stash: zulalamak - son committen itibaren yapılanları başka bir yerde tutar
+böylece sorun yaşamadan başka branch'e geçebiliriz
+
+git stash list
+yapılan stash'leri gösterir
+
+git stash pop
+bir yerde tuttuğumuz değişiklik geri gelir - sonra add ve commit yaparak kaydedebiliriz
+
+---------------------------------------------------------------------------------------------------
+
+git tag x
+x versiyonunu yapıyorum diye etiket atmamıza yarar
+
+---------------------------------------------------------------------------------------------------
+
+git remote add origin https://github.com/...
+verilen linke erişim verir - ve o linki artık origin olarak adlandırmış oluruz
+
+git push origin main(veya hangi branch ise)
+origin'e main'i iletir
+
+git clone https://github.com/...
+github'taki bir projeyi pc'ye indirir
+
+git fetch
+bu kodla projedeki değişiklikleri görebiliriz (bizden ilerde commit olup olmadığını)
+
+git pull
+bununla da git fetch'te gördüğümüz değişiklikleri projemize alabiliriz
+
+---------------------------------------------------------------------------------------------------
+
+.gitignore adında txt dosyası oluşturup içine görmezden gelmek veya gizlemek istediğimiz dosyaların adını yazarız
+
+
+
+
+
+
+
+
+
+
+
